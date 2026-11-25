@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ========== 搜索结果描述(SEO) ==========-->
+  <meta name="description" content="皇室战争 · 竞技情报站：卡牌图鉴、热门卡组、竞技场排名与版本资讯一站式查询。">
+  <!-- ========== 搜索关键词 ==========-->
+  <meta name="keywords" content="皇室战争, Clash Royale, 竞技场排名, 卡组, 觉醒卡">
+  <!-- ========== 作者姓名 ==========-->
+  <meta name="author" content="川-Coder">
+  <title>关于本站 · 皇室战争 竞技情报站</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- ========== 顶端锚点 ==========-->
+<body id="top">
+
+  <!-- ========== 头部导航 ==========-->
+  <header class="site-header">
+
+    <!-- ========== 皇室logo ==========-->
+    <div class="header-inner">
+      <a class="logo" href="index.html" title="返回竞技场首页">
+        <img src="images/icons/ClashRoyalImages.png" alt="皇室战争 · 竞技情报站 Logo">
+      </a>
+
+      <!-- ========== 横向主导航 + 淡黄色高亮 ========== -->
+      <nav class="main-nav" aria-label="主导航">
+        <ul class="nav">
+          <li><a href="index.html">竞技场首页</a></li>
+          <li>
+            <a href="signup.html">数据采集</a>
+          </li>
+          <li>
+            <a href="news.html">版本资讯</a>
+          </li>
+          <li>
+            <a href="gallery.html">图鉴</a>
+          </li>
+          <li class="active">
+            <a href="about.html">关于本站</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ========== 模拟搜索框 ========== -->
+      <form class="search-box" action="#" method="get" role="search" aria-label="站内搜索（装饰占位）">
+        <input type="text" name="keyword" placeholder="搜索卡牌 / 玩家 / 赛事…">
+        <button type="button">搜索</button>
+      </form>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="container-inner">
+
+    <!-- ========== 中部内容：站点介绍 → 皇室心得 → 留言板 ==========-->
+    <main class="page-main">
+      <h1 class="page-title">关于本站</h1>
+      <p class="page-subtitle">站点介绍 · 目录结构 · 皇室心得 · 留言板</p>
+
+      <!-- ========== 内容分区：站点介绍 ==========-->
+      <section class="content-block" id="intro" aria-label="站点介绍">
+        <h2>站点介绍</h2>
+        <p class="section-desc">皇室战争 · 竞技情报站，为休闲与进阶玩家提供卡牌、卡组与赛事情报。</p>
+
+        <div class="article-body">
+          <p>本站以“让新手少走弯路，让老手多一份参考”为出发点：首页用大尺寸轮播图、弹性相册和竞技场排名表，照顾信息密度较低的浏览习惯；数据采集页与版本资讯页则把卡组、胜率、平衡性调整等内容整理成表格与列表，方便进阶玩家快速检索。图鉴页目前正在建设，先用一张占位卡片保留入口。</p>
+          <p>这个站点不是一本攻略大全，而是一块可以慢慢积累的地基：用数据、战报和真实的对局经验，帮助新玩家理解节奏，也给老玩家留一个讨论卡组与赛事的角落。</p>
+        </div>
+
+        <h3>网站目录结构</h3>
+        <table class="data-table">
+          <caption>站点文件与页面分工</caption>
+          <thead>
+            <tr>
+              <th scope="col">文件</th>
+              <th scope="col">页面</th>
+              <th scope="col">主要内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">index.html</th>
+              <td>竞技场首页</td>
+              <td>Banner 轮播、皇室👑要文、竞技场排名、订阅表单</td>
+            </tr>
+            <tr>
+              <th scope="row">signup.html</th>
+              <td>数据采集</td>
+              <td>查询表单、示例结果、数据说明</td>
+            </tr>
+            <tr>
+              <th scope="row">news.html</th>
+              <td>版本资讯</td>
+              <td>八篇资讯列表、编辑部精选、赛事日历侧栏</td>
+            </tr>
+            <tr>
+              <th scope="row">news/</th>
+              <td>新闻详情（八篇）</td>
+              <td>全宽主图、标题、来源 / 时间、正文、相关推荐</td>
+            </tr>
+            <tr>
+              <th scope="row">gallery.html</th>
+              <td>图鉴（建设中）</td>
+              <td>开发中占位提示、返回首页与资讯入口</td>
+            </tr>
+            <tr>
+              <th scope="row">about.html</th>
+              <td>关于本站</td>
+              <td>站点介绍、目录结构、皇室心得、留言板</td>
+            </tr>
+            <tr>
+              <th scope="row">css/style.css</th>
+              <td>公共样式</td>
+              <td>全局配色、双栏布局、组件样式与注释分区</td>
+            </tr>
+            <tr>
+              <th scope="row">images/</th>
+              <td>图片素材</td>
+              <td>Logo、Banner、新闻主图、速猪卡组、动图、底栏背景</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
+
+      <hr class="divider">
+
+      <!-- ========== 内容分区 : 皇室心得 ==========-->
+      <section class="content-block" id="story" aria-label="皇室心得">
+        <h2>皇室心得</h2>
+        <p class="section-desc">从 2017 年的新手村，到 FBK 组织的日常，再到今天这个情报站。</p>
+
+        <div class="article-body story-body">
+          <img class="story-pig" src="images/icons/Pig.png" alt="野猪骑士">
+          <h3>2017 · 新手村</h3>
+          <p>我和皇室战争的故事，开始于 2017 年。那会儿刚接触这款游戏，觉得每一张卡牌都有新鲜感：解场、过河、赚费，输赢都来得很快。也正因为这份新鲜感，我经历过很长一段“删了又下、下了又删”的日子。每次回来，卡池和版本都变了一点，我也重新学一遍。</p>
+
+          <h3>2020 · 速猪与天梯</h3>
+          <p>真正沉下心是在 2020 年。我开始在快手发布自己剪的 2.6 速猪视频，从卡组思路、拉扯细节到对局复盘，慢慢有了固定的观众。那段时间一边剪视频，一边冲高榜天梯，最高打到 Top 200。名次当然重要，但更重要的是，我终于把“喜欢”变成了一件可以持续投入的事。</p>
+          <figure class="story-figure">
+            <img src="images/backgroud/Fast2.6.jpg" alt="2.6 速猪卡组">
+            <figcaption>2.6 速猪：小费、节奏与每一次准确的拉扯。</figcaption>
+          </figure>
+
+          <h3>2022 · FBK 的诞生</h3>
+          <p>2022 年 4 月 14 日，我创建了 FBK 组织。从最初招人、排卡、组织友谊赛，到后来制定训练和出战规则，FBK 一点点长成了现在的样子。我们和 DGG、EF、HGS、HL、VEA、OPL、Reborn 等组织都交过手：有被对手读穿卡组的时候，也有靠最后一波圣水翻盘的夜晚。经营一个组织，比打一局天梯难得多，但也让我认识了一群愿意认真对待这款游戏的人。</p>
+
+          <h3>现在 · 下一个战场</h3>
+          <p>现在的我，开始准备研究生的学习和考试。白天是书本，晚上还是会打开皇室战争看看版本、翻翻对局。想得越久，越觉得应该把这些年积累的东西留下点什么，于是决定先把这个网站的地基打好：为皇室新人或者高手提供交战经验、社区论坛与 AI 协助，让每一次下卡、每一次复盘都更有依据。</p>
+          <p>如果这些内容能帮到你，那就再好不过了。谢谢每一位看到这里的国王，也谢谢皇室战争，让一个普通的玩家，能把热爱变成一件长期的事。</p>
+          <img class="thanks-gif" src="images/gif/Mimimi.gif" alt="谢谢每一位国王">
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <!-- ========== 内容分区：留言板 ==========-->
+      <section class="content-block" id="board" aria-label="留言板">
+        <div class="block-head">
+          <h2>留言板</h2>
+          <img class="head-deco deco-gagaga" src="images/gif/Gagaga.gif" alt="哭泣国王动图">
+        </div>
+        <p class="section-desc">卡组交流、版本反馈或站务建议，都可以在这里留下脚印。</p>
+
+        <form action="#" method="post">
+          <fieldset>
+            <legend>发布留言</legend>
+
+            <div class="order">
+              <label for="m-name">昵称：</label>
+              <input type="text" id="m-name" name="nickname" maxlength="12" placeholder="怎么称呼你" required>
+            </div>
+
+            <div class="order">
+              <label for="m-mail">邮箱：</label>
+              <input type="email" id="m-mail" name="mail" placeholder="player@example.com" required>
+            </div>
+
+            <div class="order">
+              <label for="m-level">玩家等级：</label>
+              <input type="number" id="m-level" name="level" min="1" max="15" placeholder="1 - 15" required>
+            </div>
+
+            <div class="order">
+              <label for="m-rank">当前段位：</label>
+              <select id="m-rank" name="rank">
+                <option value="challenger" selected>挑战者</option>
+                <option value="master">大师</option>
+                <option value="champion">冠军</option>
+                <option value="royal">皇家</option>
+                <option value="amethyst">紫水晶</option>
+              </select>
+            </div>
+
+            <div class="order">
+              <span class="order-label">留言类型：</span>
+              <div class="choices">
+                <label><input type="radio" name="msgType" value="deck" checked>卡组交流</label>
+                <label><input type="radio" name="msgType" value="version">版本反馈</label>
+                <label><input type="radio" name="msgType" value="site">站务建议</label>
+              </div>
+            </div>
+
+            <div class="order">
+              <label for="m-msg">留言内容：</label>
+              <textarea id="m-msg" name="message" rows="3" cols="40" placeholder="写下你的想法，最多 200 字" maxlength="200" required></textarea>
+            </div>
+
+            <div class="order">
+              <span class="order-label">公开留言：</span>
+              <div class="choices">
+                <label><input type="checkbox" name="public" value="yes" checked>允许在留言板公开展示</label>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit">发布留言</button>
+              <button type="reset">清空重填</button>
+            </div>
+          </fieldset>
+        </form>
+
+        <h3>近期留言</h3>
+        <ul class="message-list">
+          <li>
+            <span>2026-11-20</span>
+            <strong>阿瑞斯的小号：</strong>觉醒小王子的卡组能分享一下吗？我现在的野猪骑士总是被拉扯。
+          </li>
+          <li>
+            <span>2026-11-18</span>
+            <strong>飞桶爱好者：</strong>数据采集页的示例很直观，希望以后能加上对手视角的统计。
+          </li>
+          <li>
+            <span>2026-11-15</span>
+            <strong>菜鸟国王：</strong>图鉴页什么时候上线？新玩家真的很需要卡牌定位说明。
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- 右边栏：快捷导航（本页目录 + 其他） + 站点信息 -->
+    <aside class="side-right" aria-label="快捷导航与站点信息">
+      <section class="side-card">
+        <h3>快捷导航</h3>
+        <nav class="side-nav" aria-label="关于本站页快捷导航">
+          <p class="side-sub-title">本页目录</p>
+          <ul>
+            <li><a href="#intro">站点介绍</a></li>
+            <li><a href="#story">皇室心得</a></li>
+            <li><a href="#board">留言板</a></li>
+          </ul>
+          <p class="side-sub-title">其他</p>
+          <ul>
+            <li><a href="index.html">竞技场首页</a></li>
+            <li><a href="news.html">版本资讯</a></li>
+            <li><a href="signup.html">数据采集</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="side-card">
+        <h3>站点信息</h3>
+        <dl class="site-info">
+          <dt>作者</dt>
+          <dd>川-Coder</dd>
+          <dt>版本</dt>
+          <dd>V1.0.0</dd>
+          <dt>更新时间</dt>
+          <dd>2026-11-23</dd>
+          <dt>累计访问</dt>
+          <dd>12 345 次</dd>
+          <dt>网站主题</dt>
+          <dd>皇室战争 · 竞技情报站</dd>
+        </dl>
+      </section>
+    </aside>
+    </div>
+  </div>
+
+  <!-- ========== 返回顶部：右侧空白区域的圆形箭头 ========== -->
+  <a class="back-top" href="#top" title="返回页面顶部" aria-label="返回页面顶部">↑</a>
+
+  <!-- ========== 统一底栏 ========== -->
+  <footer class="site-footer">
+
+    <!-- ========== 模糊红国王背景(渐变蓝) ========== -->
+    <img class="footer-bg" src="images/backgroud/RedKing.jpg" alt="" aria-hidden="true">
+
+    <!-- ========== Logo + 站点名 ========== -->
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img class="footer-logo" src="images/icons/ClashRoyalImages2.png" alt="皇室战争双国王 Logo">
+          <div class="footer-titles">
+            <p class="footer-title-main">皇室战争</p>
+            <p class="footer-title-sub">竞技情报站</p>
+          </div>
+        </div>
+
+        <!-- ========== 模拟联系方式 ========== -->
+        <ul class="footer-contact">
+          <li><span class="contact-circle">邮</span><span>邮箱：<a href="mailto:chuan.coder@clashroyal.cn">chuan.coder@clashroyal.cn</a></span></li>
+          <li><span class="contact-circle">微</span><span>微信：CR_ChuanCoder</span></li>
+          <li><span class="contact-circle">电</span><span>手机：<a href="tel:13800001234">138 0000 1234</a></span></li>
+          <li><span class="contact-circle">G</span><span>GitHub：<a href="https://github.com/chuan-coder" target="_blank" rel="noopener" title="川-Coder 的 GitHub 主页">github.com/chuan-coder</a></span></li>
+        </ul>
+      </div>
+
+      <!-- ========== 个人网站版权信息 ========== -->
+      <div class="footer-lower">
+        <div class="footer-info">
+          <p>作者：川-Coder</p>
+          <p>版本信息：V1.0.0</p>
+          <p class="footer-theme">网站主题：皇室战争 · 竞技情报站</p>
+        </div>
+        <p class="footer-quote">“卡牌没有绝对的强弱，圣水与时机才是国王的胜负手。”<br>本站数据均为模拟示例，仅供学习交流。</p>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      <p>&copy; 2026 皇室战争 · 竞技情报站 · 版权所有 · 仅供学习交流</p>
+    </div>
+  </footer>
+
+</body>
+</html>

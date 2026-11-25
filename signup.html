@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ========== 搜索结果描述(SEO) ==========-->
+  <meta name="description" content="皇室战争 · 竞技情报站：卡牌图鉴、热门卡组、竞技场排名与版本资讯一站式查询。">
+  <!-- ========== 搜索关键词 ==========-->
+  <meta name="keywords" content="皇室战争, Clash Royale, 竞技场排名, 卡组, 觉醒卡">
+  <!-- ========== 作者姓名 ==========-->
+  <meta name="author" content="川-Coder">
+  <title>数据采集 · 皇室战争 竞技情报站</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- ========== 顶端锚点 ==========-->
+<body id="top">
+
+  <!-- ========== 头部导航 ==========-->
+  <header class="site-header">
+
+    <!-- ========== 皇室logo ==========-->
+    <div class="header-inner">
+      <a class="logo" href="index.html" title="返回竞技场首页">
+        <img src="images/icons/ClashRoyalImages.png" alt="皇室战争 · 竞技情报站 Logo">
+      </a>
+
+      <!-- ========== 横向主导航 + 淡黄色高亮 ========== -->
+      <nav class="main-nav" aria-label="主导航">
+        <ul class="nav">
+          <li><a href="index.html">竞技场首页</a></li>
+          <li class="active">
+            <a href="signup.html">数据采集</a>
+          </li>
+          <li>
+            <a href="news.html">版本资讯</a>
+          </li>
+          <li>
+            <a href="gallery.html">图鉴</a>
+          </li>
+          <li>
+            <a href="about.html">关于本站</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ========== 模拟搜索框 ========== -->
+      <form class="search-box" action="#" method="get" role="search" aria-label="站内搜索（装饰占位）">
+        <input type="text" name="keyword" placeholder="搜索卡牌 / 玩家 / 赛事…">
+        <button type="button">搜索</button>
+      </form>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="container-inner">
+
+    <!-- ========== 中部内容：查询表单 → 示例结果 → 数据说明 ========== -->
+    <main class="page-main">
+      <h1 class="page-title">数据采集</h1>
+      <p class="page-subtitle">按玩家与赛季采集战报，查看卡组胜率与平均圣水</p>
+
+      <!-- ========== 查询表单 ========== -->
+      <section class="content-block" id="query" aria-label="查询表单">
+        <h2>查询表单</h2>
+        <p class="section-desc">填写玩家信息与查询条件，点击“开始采集”即可生成示例战报。</p>
+
+        <!-- ========= 玩家信息 ========== -->
+        <form action="#" method="post">
+          <fieldset>
+            <legend>玩家信息</legend>
+
+            <div class="order">
+              <label for="q-name">玩家名称：</label>
+              <input type="text" id="q-name" name="playerName" maxlength="16" placeholder="请输入游戏内昵称" required>
+            </div>
+
+            <div class="order">
+              <label for="q-id">玩家 ID：</label>
+              <input type="text" id="q-id" name="playerId" pattern="[0-9]{8}" maxlength="8" placeholder="8 位数字" required>
+            </div>
+
+            <div class="order">
+              <label for="q-season">查询赛季：</label>
+              <select id="q-season" name="season">
+                <option value="2026-s1" selected>2026 觉醒之潮</option>
+                <option value="2026-s2">2026 紫水晶远征</option>
+                <option value="2025-final">2025 全球总决赛</option>
+                <option value="2024-classic">2024 经典赛季</option>
+                <option value="2023-goblin">2023 哥布林崛起</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <!-- ========== 查询条件 ========== -->
+          <fieldset>
+            <legend>查询条件</legend>
+
+            <div class="order">
+              <span class="order-label">查询类型：</span>
+              <div class="choices">
+                <label><input type="radio" name="queryType" value="ladder" checked>天梯对战</label>
+                <label><input type="radio" name="queryType" value="league">联赛对局</label>
+                <label><input type="radio" name="queryType" value="clan">部落战</label>
+              </div>
+            </div>
+
+            <div class="order">
+              <span class="order-label">关注数据：</span>
+              <div class="choices">
+                <label><input type="checkbox" name="focus" value="deck" checked>卡组</label>
+                <label><input type="checkbox" name="focus" value="winRate">胜率</label>
+                <label><input type="checkbox" name="focus" value="elixir" checked>平均圣水</label>
+              </div>
+            </div>
+
+            <div class="order">
+              <label for="q-note">备注：</label>
+              <textarea id="q-note" name="note" rows="3" cols="40" placeholder="例如：只统计紫水晶段位的对局"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit">开始采集</button>
+              <button type="reset">重置条件</button>
+            </div>
+          </fieldset>
+        </form>
+
+        <img class="form-deco" src="images/icons/GoodLuck.png" alt="好运国王点赞插图">
+      </section>
+
+      <hr class="divider">
+
+      <!-- ========= 内容分区：示例结果 ========== -->
+      <section class="content-block" id="result" aria-label="示例结果">
+        <h2>示例结果</h2>
+        <p class="section-desc">下表为玩家「chuan」近 30 场天梯对战的卡组分布示例。</p>
+
+        <table class="data-table">
+          <caption>示例查询结果 · 2026 觉醒之潮赛季 · 天梯对战 30 场</caption>
+          <thead>
+            <tr>
+              <th scope="col">卡组</th>
+              <th scope="col">使用次数</th>
+              <th scope="col">胜率</th>
+              <th scope="col">平均圣水</th>
+              <th scope="col">评价</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">野猪骑士 · 地震 · 小王子 · 电击</th>
+              <td>12</td>
+              <td>75%</td>
+              <td>3.4</td>
+              <td>强势</td>
+            </tr>
+            <tr>
+              <th scope="row">哥布林飞桶 · 骷髅军团 · 滚木 · 火球</th>
+              <td>8</td>
+              <td>62%</td>
+              <td>3.3</td>
+              <td>稳定</td>
+            </tr>
+            <tr>
+              <th scope="row">皇家巨人 · 火球 · 电击 · 骷髅军团</th>
+              <td>6</td>
+              <td>50%</td>
+              <td>4.1</td>
+              <td>平庸</td>
+            </tr>
+            <tr>
+              <th scope="row">皮卡超人 · 闪电法师 · 冰冻 · 骷髅守卫</th>
+              <td>4</td>
+              <td>25%</td>
+              <td>3.9</td>
+              <td>待优化</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="5">注：以上为模拟数据，用于展示表格排版，不代表真实天梯环境。</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <hr class="divider">
+
+      <!-- ========== 内容分区：数据说明 ========== -->
+      <section class="content-block" id="desc" aria-label="数据说明">
+        <img class="deco-king" src="images/icons/BlueKing.png" alt="蓝王指示插图">
+        <h2>数据说明</h2>
+
+        <!-- ========== 有序+无序列表 ========== -->
+        <dl class="fact-list">
+          <dt>采集范围</dt>
+          <dd>默认采集最近 30 场天梯对战，可在查询条件中切换为联赛对局或部落战。</dd>
+          <dt>更新频率</dt>
+          <dd>数据库每日 08:00 增量更新一次；版本更新当日的数据会延迟到次日生效。</dd>
+          <dt>数据来源</dt>
+          <dd>玩家公开对战记录与赛事官方统计。本站只做汇总展示，不提供账号相关服务。</dd>
+          <dt>脱敏规则</dt>
+          <dd>玩家标签仅保留后四位，聊天与部落信息不采集；示例结果中的名称均为模拟名称。</dd>
+        </dl>
+
+        <h3>查询流程</h3>
+        <ol class="steps">
+          <li>在查询表单填写玩家名称与 8 位玩家 ID。</li>
+          <li>选择赛季与查询类型，勾选需要关注的卡组、胜率或平均圣水。</li>
+          <li>提交后等待生成结果，页面下方会展示卡组分布与胜率表格。</li>
+        </ol>
+
+        <div class="tip-box">
+          小提示：查询结果只反映历史对局，不能作为“下赛季必赢”的依据。卡组强度会随平衡性调整变化。
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== 右边栏：快捷导航（本页目录 + 其他） + 采集帮助 ========== -->
+    <aside class="side-right" aria-label="快捷导航与采集帮助">
+      <section class="side-card">
+        <h3>快捷导航</h3>
+        <nav class="side-nav" aria-label="数据采集页快捷导航">
+          <p class="side-sub-title">本页目录</p>
+          <ul>
+            <li><a href="#query">查询表单</a></li>
+            <li><a href="#result">示例结果</a></li>
+            <li><a href="#desc">数据说明</a></li>
+          </ul>
+          <p class="side-sub-title">其他</p>
+          <ul>
+            <li><a href="index.html">竞技场首页</a></li>
+            <li><a href="news.html">版本资讯</a></li>
+            <li><a href="about.html">关于本站</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="side-card">
+        <h3>采集帮助</h3>
+        <p>找不到玩家 ID？进入游戏后点击个人名片，标签后四位就是查询所需的 8 位数字。</p>
+        <p>查询当天对局时，数据可能有 30 分钟延迟，稍后再试即可。</p>
+        <p>如果结果为空，先确认赛季与查询类型是否匹配。</p>
+        <p>每位玩家每天最多采集 20 次，超出后请次日再来。</p>
+        <p class="side-link"><a href="about.html#board">遇到问题？前往留言板 →</a></p>
+      </section>
+    </aside>
+    </div>
+  </div>
+
+  <!-- ========== 返回顶部：右侧空白区域的圆形箭头 ========== -->
+  <a class="back-top" href="#top" title="返回页面顶部" aria-label="返回页面顶部">↑</a>
+
+  <!-- ========== 统一底栏 ========== -->
+  <footer class="site-footer">
+
+    <!-- ========== 模糊红国王背景(渐变蓝) ========== -->
+    <img class="footer-bg" src="images/backgroud/RedKing.jpg" alt="" aria-hidden="true">
+
+    <!-- ========== Logo + 站点名 ========== -->
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img class="footer-logo" src="images/icons/ClashRoyalImages2.png" alt="皇室战争双国王 Logo">
+          <div class="footer-titles">
+            <p class="footer-title-main">皇室战争</p>
+            <p class="footer-title-sub">竞技情报站</p>
+          </div>
+        </div>
+
+        <!-- ========== 模拟联系方式 ========== -->
+        <ul class="footer-contact">
+          <li><span class="contact-circle">邮</span><span>邮箱：<a href="mailto:chuan.coder@clashroyal.cn">chuan.coder@clashroyal.cn</a></span></li>
+          <li><span class="contact-circle">微</span><span>微信：CR_ChuanCoder</span></li>
+          <li><span class="contact-circle">电</span><span>手机：<a href="tel:13800001234">138 0000 1234</a></span></li>
+          <li><span class="contact-circle">G</span><span>GitHub：<a href="https://github.com/chuan-coder" target="_blank" rel="noopener" title="川-Coder 的 GitHub 主页">github.com/chuan-coder</a></span></li>
+        </ul>
+      </div>
+
+      <!-- ========== 个人网站版权信息 ========== -->
+      <div class="footer-lower">
+        <div class="footer-info">
+          <p>作者：川-Coder</p>
+          <p>版本信息：V1.0.0</p>
+          <p class="footer-theme">网站主题：皇室战争 · 竞技情报站</p>
+        </div>
+        <p class="footer-quote">“卡牌没有绝对的强弱，圣水与时机才是国王的胜负手。”<br>本站数据均为模拟示例，仅供学习交流。</p>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      <p>&copy; 2026 皇室战争 · 竞技情报站 · 版权所有 · 仅供学习交流</p>
+    </div>
+  </footer>
+
+</body>
+</html>

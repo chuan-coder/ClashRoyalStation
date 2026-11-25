@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ========== 搜索结果描述(SEO) ==========-->
+  <meta name="description" content="皇室战争 · 竞技情报站：卡牌图鉴、热门卡组、竞技场排名与版本资讯一站式查询。">
+  <!-- ========== 搜索关键词 ==========-->
+  <meta name="keywords" content="皇室战争, Clash Royale, 竞技场排名, 卡组, 觉醒卡">
+  <!-- ========== 作者姓名 ==========-->
+  <meta name="author" content="川-Coder">
+  <title>竞技场首页 · 皇室战争 竞技情报站</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- ========== 顶端锚点 ==========-->
+<body id="top">
+
+  <!-- ========== 头部导航 ==========-->
+  <header class="site-header">
+
+    <!-- ========== 皇室logo ==========-->
+    <div class="header-inner">
+      <a class="logo" href="index.html" title="返回竞技场首页">
+        <img src="images/icons/ClashRoyalImages.png" alt="皇室战争 · 竞技情报站 Logo">
+      </a>
+
+      <!-- ========== 横向主导航 + 淡黄色高亮 ========== -->
+      <nav class="main-nav" aria-label="主导航">
+        <ul class="nav">
+          <li class="active"><a href="index.html">竞技场首页</a></li>
+          <li>
+            <a href="signup.html">数据采集</a>
+          </li>
+          <li>
+            <a href="news.html">版本资讯</a>
+          </li>
+          <li>
+            <a href="gallery.html">图鉴</a>
+          </li>
+          <li>
+            <a href="about.html">关于本站</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ========== 模拟搜索框 ========== -->
+      <form class="search-box" action="#" method="get" role="search" aria-label="站内搜索">
+        <input type="text" name="keyword" placeholder="搜索卡牌 / 玩家 / 赛事…">
+        <button type="button">搜索</button>
+      </form>
+    </div>
+  </header>
+
+  <!-- ========== 版心卡片(外层背板 + 内层内容区) ========== -->
+  <div class="container">
+    <div class="container-inner">
+
+    <!-- ========== 中部主内容：Banner图 → 皇室要文 → 排名 → 订阅 ==========-->
+    <main class="page-main">
+      <h1 class="page-title">竞技场首页</h1>
+      <p class="page-subtitle">卡牌 · 卡组 · 赛事，一站式皇家情报站</p>
+
+      <!-- ========== 焦点轮播图(文字说明 + 箭头轮换) ========== -->
+      <section class="banner-section" id="banner" aria-label="赛事焦点轮播图">
+        <input class="banner-radio" type="radio" name="banner" id="banner-1" checked>
+        <input class="banner-radio" type="radio" name="banner" id="banner-2">
+        <input class="banner-radio" type="radio" name="banner" id="banner-3">
+
+        <div class="banner-stage">
+          <div class="banner-slide slide-1">
+            <a class="banner-image" href="images/banner/Cards.jpg" target="_blank" rel="noopener" title="查看觉醒之潮卡牌原图">
+              <img src="images/banner/Cards.jpg" alt="觉醒之潮版本 · 卡牌合集">
+            </a>
+            <div class="banner-caption">
+              <h3>觉醒之潮 · 卡牌全收录</h3>
+              <p>紫色觉醒能量降临竞技场。</p>
+              <a href="gallery.html#dev">进入卡牌图鉴 →</a>
+            </div>
+            <label class="banner-arrow banner-arrow-prev" for="banner-3" title="上一张：胜利属于国王">‹</label>
+            <label class="banner-arrow banner-arrow-next" for="banner-2" title="下一张：2026 CRL 全球总冠军">›</label>
+          </div>
+
+          <div class="banner-slide slide-2">
+            <a class="banner-image" href="images/banner/Champion.jpg" target="_blank" rel="noopener" title="查看冠军海报原图">
+              <img src="images/banner/Champion.jpg" alt="2026 CRL 全球总冠军 Mohamed Light">
+            </a>
+            <div class="banner-caption">
+              <h3>2026 CRL 全球总冠军</h3>
+              <p>Mohamed Light 登顶世界之巅。</p>
+              <a href="news/crl.html">阅读总决赛报道 →</a>
+            </div>
+            <label class="banner-arrow banner-arrow-prev" for="banner-1" title="上一张：觉醒之潮 · 卡牌全收录">‹</label>
+            <label class="banner-arrow banner-arrow-next" for="banner-3" title="下一张：胜利属于国王">›</label>
+          </div>
+
+          <div class="banner-slide slide-3">
+            <a class="banner-image" href="images/banner/Victory.jpg" target="_blank" rel="noopener" title="查看胜利时刻原图">
+              <img src="images/banner/Victory.jpg" alt="皇室战争胜利时刻 · 国王与卫队">
+            </a>
+            <div class="banner-caption">
+              <h3>胜利属于国王</h3>
+              <p>新版平衡性调整已上线。</p>
+              <a href="news.html">查看版本动态 →</a>
+            </div>
+            <label class="banner-arrow banner-arrow-prev" for="banner-2" title="上一张：2026 CRL 全球总冠军">‹</label>
+            <label class="banner-arrow banner-arrow-next" for="banner-1" title="下一张：觉醒之潮 · 卡牌全收录">›</label>
+          </div>
+        </div>
+
+        <div class="banner-dots" aria-label="轮播图切换">
+          <label for="banner-1" title="切换到第 1 张" aria-label="切换到第 1 张"></label>
+          <label for="banner-2" title="切换到第 2 张" aria-label="切换到第 2 张"></label>
+          <label for="banner-3" title="切换到第 3 张" aria-label="切换到第 3 张"></label>
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <!-- ========== 皇室👑要文：弹性相册 ========== -->
+      <article class="content-block" id="season" aria-label="皇室要文新闻速览">
+        <h2 class="album-title">皇室👑要文</h2>
+        <p class="section-desc">从冠军奖杯到分服机制，八条精选情报带你快速读懂这个赛季。</p>
+
+        <ul class="album">
+          <li>
+            <a href="news/trophy.html" title="阅读冠军奖杯资讯"><img src="images/news/Cup.jpg" alt="冠军奖杯与段位徽章"></a>
+            <p><a href="news/trophy.html">冠军奖杯</a></p>
+          </li>
+          <li>
+            <a href="news/epic-cards.html" title="阅读史诗卡历史资讯"><img src="images/news/EpicCard.jpg" alt="史诗卡牌原画"></a>
+            <p><a href="news/epic-cards.html">史诗卡历史</a></p>
+          </li>
+          <li>
+            <a href="news/goblin.html" title="阅读哥布林家族资讯"><img src="images/news/Goblin.jpg" alt="哥布林家族群像"></a>
+            <p><a href="news/goblin.html">哥布林家族</a></p>
+          </li>
+          <li>
+            <a href="news/awakening.html" title="阅读觉醒卡介绍"><img src="images/news/Juexing.jpg" alt="觉醒卡牌原画"></a>
+            <p><a href="news/awakening.html">觉醒卡介绍</a></p>
+          </li>
+          <li>
+            <a href="news/crl.html" title="阅读全球锦标赛资讯"><img src="images/news/Match.jpg" alt="CRL 全球总决赛现场"></a>
+            <p><a href="news/crl.html">全球锦标赛</a></p>
+          </li>
+          <li>
+            <a href="news/prince.html" title="阅读小王子加强资讯"><img src="images/news/Prince.jpg" alt="小王子卡牌插画"></a>
+            <p><a href="news/prince.html">小王子加强</a></p>
+          </li>
+          <li>
+            <a href="news/server-split.html" title="阅读分服机制资讯"><img src="images/news/ServerSplit.jpg" alt="分服机制宣传图"></a>
+            <p><a href="news/server-split.html">分服机制</a></p>
+          </li>
+          <li>
+            <a href="news/guide.html" title="阅读新手攻略"><img src="images/news/Guide.jpg" alt="野猪骑士与冰法师的夏日攻略"></a>
+            <p><a href="news/guide.html">新手攻略</a></p>
+          </li>
+        </ul>
+      </article>
+
+      <hr class="divider">
+
+      <!-- ========== 竞技场排名：表格(无障碍阅读)========== -->
+      <section class="content-block" id="ranking" aria-label="竞技场排名">
+        <h2>竞技场排名</h2>
+        <p class="section-desc">紫水晶段位 · 全球前十玩家（示例数据，每日 08:00 更新）</p>
+
+        <table class="rank-table">
+          <caption>2026“觉醒之潮”赛季 · 竞技场前十排行榜</caption>
+          <thead>
+            <tr>
+              <th scope="col">名称</th>
+              <th scope="col">部落</th>
+              <th scope="col">卡组</th>
+              <th scope="col">平均圣水</th>
+              <th scope="col">紫水晶分数</th>
+              <th scope="col">国家</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <span class="rank-no">01</span><img class="fav-icon" src="images/participant/favor1.png" alt="常用卡：锅炉"><span class="player-name">Aminiwow</span>
+              </th>
+              <td>No Clan</td>
+              <td class="deck-cell">野猪骑士 · 小王子 · 火球 · 滚木</td>
+              <td>3.3</td>
+              <td class="score-cell"><img class="amethyst-row-icon" src="images/icons/Amethyst.png" alt="">3 490</td>
+              <td>美国</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="rank-no">02</span><img class="fav-icon" src="images/participant/favor2.png" alt="常用卡：雷电巨人"><span class="player-name">TEF丨Yoru✨弥雾✨晚神</span>
+              </th>
+              <td>OXELUNE 2</td>
+              <td class="deck-cell">哥布林飞桶 · 闪电法师 · 火球 · 滚木</td>
+              <td>4.4</td>
+              <td class="score-cell"><img class="amethyst-row-icon" src="images/icons/Amethyst.png" alt="">3 403</td>
+              <td>中国</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="rank-no">03</span><img class="fav-icon" src="images/participant/favor3.png" alt="常用卡：寒冰法师"><span class="player-name">icecream✨アイス☘️</span>
+              </th>
+              <td>x@AIClashRoyale</td>
+              <td class="deck-cell">皮卡超人 · 闪电法师 · 冰冻法术 · 骷髅守卫</td>
+              <td>3.3</td>
+              <td class="score-cell"><img class="amethyst-row-icon" src="images/icons/Amethyst.png" alt="">3 401</td>
+              <td>日本</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="rank-no">04</span><img class="fav-icon" src="images/participant/favor4.png" alt="常用卡：骷髅召唤"><span class="player-name">♠️ThE SuRgEoN♠️</span>
+              </th>
+              <td>No Clan</td>
+              <td class="deck-cell">熔岩猎犬 · 气球兵 · 火球 · 骷髅军团</td>
+              <td>3.3</td>
+              <td class="score-cell"><img class="amethyst-row-icon" src="images/icons/Amethyst.png" alt="">3 345</td>
+              <td>巴西</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="rank-no">05</span><img class="fav-icon" src="images/participant/favor5.png" alt="常用卡：锅炉"><span class="player-name">frown</span>
+              </th>
+              <td>x@AIClashRoyale</td>
+              <td class="deck-cell">皇家巨人 · 火球 · 电击法术 · 骷髅军团</td>
+              <td>3.3</td>
+              <td class="score-cell"><img class="amethyst-row-icon" src="images/icons/Amethyst.png" alt="">3 340</td>
+              <td>法国</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="rank-no">06</span><img class="fav-icon" src="images/participant/favor6.png" alt="常用卡：天狗"><span class="player-name">AK 伪物✨瓜呱</span>
+              </th>
+              <td>OXELUNE</td>
+              <td class="deck-cell">野猪骑士 · 烈焰熔炉 · 火球 · 滚木</td>
+              <td>3.5</td>
+              <td class="score-cell"><img class="amethyst-row-icon" src="images/icons/Amethyst.png" alt="">3 340</td>
+              <td>中国</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="rank-no">07</span><img class="fav-icon" src="images/participant/favor1.png" alt="常用卡：大胃袋"><span class="player-name">adriel</span>
+              </th>
+              <td>No Clan</td>
+              <td class="deck-cell">哥布林飞桶 · 骷髅召唤 · 毒药法术 · 滚木</td>
+              <td>3.3</td>
+              <td class="score-cell"><img class="amethyst-row-icon" src="images/icons/Amethyst.png" alt="">3 326</td>
+              <td>巴西</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="rank-no">08</span><img class="fav-icon" src="images/participant/favor2.png" alt="常用卡：雷电巨人"><span class="player-name">AK Tanjiro</span>
+              </th>
+              <td>The G❄️ats</td>
+              <td class="deck-cell">烈焰法师 · 熔岩猎犬 · 火球 · 骷髅军团</td>
+              <td>4.4</td>
+              <td class="score-cell"><img class="amethyst-row-icon" src="images/icons/Amethyst.png" alt="">3 312</td>
+              <td>美国</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="rank-no">09</span><img class="fav-icon" src="images/participant/favor3.png" alt="常用卡：野蛮人工程锤"><span class="player-name">Nicoco23</span>
+              </th>
+              <td>LUX✨Light</td>
+              <td class="deck-cell">圣水戈仑 · 圣水收集器 · 电击法术 · 火球</td>
+              <td>3.9</td>
+              <td class="score-cell"><img class="amethyst-row-icon" src="images/icons/Amethyst.png" alt="">3 291</td>
+              <td>意大利</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="rank-no">10</span><img class="fav-icon" src="images/participant/favor4.png" alt="常用卡：大胃袋"><span class="player-name">СЫН ФРЕНДИКА</span>
+              </th>
+              <td>khazardy’s</td>
+              <td class="deck-cell">暗夜女巫 · 熔岩猎犬 · 毒药法术 · 骷髅军团</td>
+              <td>3.0</td>
+              <td class="score-cell"><img class="amethyst-row-icon" src="images/icons/Amethyst.png" alt="">3 287</td>
+              <td>俄罗斯</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="6">注：表内选手、部落、分数均为模拟数据，仅用于网页排版演示。</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <hr class="divider">
+
+      <!-- ========== 订阅版本资讯(表单 + 图标) ========== -->
+      <section class="content-block" id="subscribe" aria-label="订阅版本资讯">
+        <h2>订阅版本资讯</h2>
+        <p class="section-desc">订阅后第一时间收到平衡性调整、觉醒卡与赛事日历，不花圣水。</p>
+
+        <div class="subscribe-inner">
+          <form class="subscribe-form" action="#" method="post">
+            <fieldset>
+              <legend>订阅登记</legend>
+
+              <div class="order">
+                <label for="sub-mail">邮箱：</label>
+                <input type="email" id="sub-mail" name="mail" placeholder="player@example.com" required>
+              </div>
+
+              <div class="order">
+                <label for="sub-name">游戏名称：</label>
+                <input type="text" id="sub-name" name="gameName" maxlength="16" placeholder="请输入游戏内昵称" required>
+              </div>
+
+              <div class="order">
+                <label for="sub-tel">联系电话：</label>
+                <input type="text" id="sub-tel" name="tel" pattern="[0-9]{11}" maxlength="11" placeholder="11 位手机号" required>
+              </div>
+
+              <div class="order">
+                <label for="sub-season">关注赛季：</label>
+                <select id="sub-season" name="season">
+                  <option value="2026-s1" selected>2026 觉醒之潮</option>
+                  <option value="2026-s2">2026 紫水晶远征</option>
+                  <option value="2025-final">2025 全球总决赛</option>
+                  <option value="2024-classic">2024 经典赛季</option>
+                  <option value="2023-goblin">2023 哥布林崛起</option>
+                </select>
+              </div>
+
+              <div class="order">
+                <span class="order-label">资讯类型：</span>
+                <div class="choices">
+                  <label><input type="checkbox" name="type" value="balance" checked>平衡性调整</label>
+                  <label><input type="checkbox" name="type" value="event">赛事活动</label>
+                  <label><input type="checkbox" name="type" value="awaken">觉醒卡</label>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit">立即订阅</button>
+                <button type="reset">重填</button>
+              </div>
+            </fieldset>
+          </form>
+
+          <div class="subscribe-poster">
+            <img src="images/list-side.png" alt="哥布林财务官头像">
+            <p>哥布林财务官提醒：<br>订阅不花圣水，掉落保持理性。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== 侧边栏(快捷导航 + 版本运营公告) ========== -->
+    <aside class="side-right" aria-label="快捷导航与运营公告">
+      <section class="side-card">
+        <h3>快捷导航</h3>
+        <nav class="side-nav" aria-label="首页快捷导航">
+          <p class="side-sub-title">本页目录</p>
+          <ul>
+            <li><a href="#banner">赛事焦点</a></li>
+            <li><a href="#season">皇室要文</a></li>
+            <li><a href="#ranking">竞技场排名</a></li>
+            <li><a href="#subscribe">订阅资讯</a></li>
+          </ul>
+          <p class="side-sub-title">其他</p>
+          <ul>
+            <li><a href="news.html">版本资讯</a></li>
+            <li><a href="signup.html">数据采集</a></li>
+            <li><a href="about.html">关于本站</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="side-card">
+        <h3>版本运营公告</h3>
+        <ul class="notice-list">
+          <li><span class="notice-date">11-20</span>「觉醒之潮」正式上线，觉醒槽位开放</li>
+          <li><span class="notice-date">11-26</span>平衡性热更新：冰人与飞桶再调整</li>
+          <li><span class="notice-date">12-01</span>部落战报名通道开放</li>
+          <li><span class="notice-date">每日</span>08:00 更新排名与战报数据</li>
+        </ul>
+        <p class="side-link"><a href="news.html#list">查看完整公告 →</a></p>
+      </section>
+    </aside>
+    </div>
+  </div>
+
+  <!-- ========== 返回顶部(箭头) ========== -->
+  <a class="back-top" href="#top" title="返回页面顶部" aria-label="返回页面顶部">↑</a>
+
+  <!-- ========== 统一底栏 ========== -->
+  <footer class="site-footer">
+
+    <!-- ========== 模糊红国王背景(渐变蓝) ========== -->
+    <img class="footer-bg" src="images/backgroud/RedKing.jpg" alt="" aria-hidden="true">
+
+    <!-- ========== Logo + 站点名 ========== -->
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img class="footer-logo" src="images/icons/ClashRoyalImages2.png" alt="皇室战争双国王 Logo">
+          <div class="footer-titles">
+            <p class="footer-title-main">皇室战争</p>
+            <p class="footer-title-sub">竞技情报站</p>
+          </div>
+        </div>
+
+        <!-- ========== 模拟联系方式 ========== -->
+        <ul class="footer-contact">
+          <li><span class="contact-circle">邮</span><span>邮箱：<a href="mailto:chuan.coder@clashroyal.cn">chuan.coder@clashroyal.cn</a></span></li>
+          <li><span class="contact-circle">微</span><span>微信：CR_ChuanCoder</span></li>
+          <li><span class="contact-circle">电</span><span>手机：<a href="tel:13800001234">138 0000 1234</a></span></li>
+          <li><span class="contact-circle">G</span><span>GitHub：<a href="https://github.com/chuan-coder" target="_blank" rel="noopener" title="川-Coder 的 GitHub 主页">github.com/chuan-coder</a></span></li>
+        </ul>
+      </div>
+
+      <!-- ========== 个人网站版权信息 ========== -->
+      <div class="footer-lower">
+        <div class="footer-info">
+          <p>作者：川-Coder</p>
+          <p>版本信息：V1.0.0</p>
+          <p class="footer-theme">网站主题：皇室战争 · 竞技情报站</p>
+        </div>
+        <p class="footer-quote">“卡牌没有绝对的强弱，圣水与时机才是国王的胜负手。”<br>本站数据均为模拟示例，仅供学习交流。</p>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      <p>&copy; 2026 皇室战争 · 竞技情报站 · 版权所有 · 仅供学习交流</p>
+    </div>
+  </footer>
+
+</body>
+</html>
